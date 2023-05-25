@@ -1,12 +1,10 @@
 <p class="h3 font-weight-bold mb-0">Dashboard</p>
 
-<div class="row" *ngIf="dashboardMenu">
+<div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xs:gap-y-6 md:gap-y-16 dashboard 4k:grid-cols-4 4k:gap-8" *ngIf="dashboardMenu">
 
 <ng-container *ngFor="let menuInfo of dashboardMenu">
 
-    <div class="col-md-4 mb-2">
-
-<ng-container *ngIf="menuInfo?.title && (menuInfo.title.includes('UDISE') || menuInfo.title.includes('NAS'))">
+    <ng-container *ngIf="menuInfo?.title && (menuInfo.title.includes('UDISE') || menuInfo.title.includes('NAS'))">  
 
 <!--<app-dashboard-card [cardInfo]="menuInfo" (onClick)="onClickOfDashboardItem($event)"></app-dashboard-card> -->
 
@@ -14,6 +12,6 @@
 
 </ng-container>
 
-    </div>
-
 </ng-container>
+
+</div>
